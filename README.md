@@ -45,29 +45,31 @@ ok\r\n
 
 
 ## Command List
-| M-Code | Response | Verified | Comment                                          |
-|-|-|-|-|
-| ~M601 S1 |CMD M601 Received.<br>Control Success.<br>ok<br>|true| Login Command|
-| ~M602 |CMD M602 Received.<br>Control Release.<br>ok|true| Logout Command|
-| ~M17 |CMD M17 Received.<br>ok|false| Command to be determined|
-| ~M18 |CMD M18 Received.<br>ok|false| Command to be determined|
-| ~M23 |CMD M23 Received.<br>File opened:  Size: xxxxxxxxxxx<br>File selected<br>ok|false| Command to be determined|
-| ~M24 |CMD M24 Received.<br>ok|false| Command to be determined|
-| ~M25 |CMD M25 Received.<br>ok|false| Command to be determined|
-| ~M26 |CMD M26 Received.<br>ok|false| Command to be determined|
-| ~M27 |CMD M27 Received.<br>SD printing byte 0/100<br>ok|true| Printing Status report in % or bytes|
-| ~M29 |CMD M29 Received.<br>ok|false| Command to be determined|
-| ~M104 |CMD M104 Received.<br>ok|false| Command to be determined|
-| ~M105 |CMD M105 Received.<br>T0:20 /0 B:21/0<br>ok|true| Hot end and print bed Temperature report|
-| ~M106 |CMD M106 Received.<br>ok|false| Command to be determined|
-| ~M107 |CMD M107 Received.<br>ok|false| Command to be determined|
-| ~M108 |CMD M108 Received.<br>ok|false| Command to be determined|
-| ~M112 |CMD M112 Received.<br>ok|false| Command to be determined|
-| ~M114 |CMD M114 Received.<br>X:0 Y:0 Z:0 A:0 B:0<br>ok|true| ToolHead Postion report|
-| ~M115 |CMD M115 Received.<br>Machine Type: Voxelab Aries<br>Machine Name: Aries<br>Firmware: v1.1.3<br>SN: ABCDEF1234567<br>X: 200 Y: 200 Z: 200<br>Tool Count: 1<br>ok|true| 3D Printer Information|
-| ~M119 |CMD M119 Received.<br>Endstop: X-max:0 Y-max:0 Z-max:1<br>MachineStatus: READY<br>MoveMode: READY<br>Status: S:0 L:0 J:0 F:0<<br>ok|true| Printer Status Report|
-| ~M140 |CMD M140 Received.<br>ok|false| Command to be determined|
-| ~M146 |CMD M146 Received.<br>ok|false| Command to be determined|
+When Veified is false, only the bare command has been sent, but the reaction hasn't been checked on the printer or because no parameters ha been sent to either have a modified response or a change in the Printer behaviour
+
+| M-Code | Response | Verified | Comment | Marlin or RepRap Command name |
+|-|-|-|-|-|
+| ~M601 S1 |CMD M601 Received.<br>Control Success.<br>ok<br>|true| Login Command|-|
+| ~M602 |CMD M602 Received.<br>Control Release.<br>ok|true| Logout Command|-|
+| ~M17 |CMD M17 Received.<br>ok|false| Command to be determined|Enable Steppers|
+| ~M18 |CMD M18 Received.<br>ok|false| Command to be determined|Disable steppers|
+| ~M23 |CMD M23 Received.<br>File opened:  Size: xxxxxxxxxxx<br>File selected<br>ok|false| Command to be determined|Select SD file|
+| ~M24 |CMD M24 Received.<br>ok|false| Command to be determined|Start or Resume SD print|
+| ~M25 |CMD M25 Received.<br>ok|false| Command to be determined|Pause SD print|
+| ~M26 |CMD M26 Received.<br>ok|false| Command to be determined|Set SD position|
+| ~M27 |CMD M27 Received.<br>SD printing byte 0/100<br>ok|true| Printing Status report in % or bytes|Report SD print status|
+| ~M29 |CMD M29 Received.<br>ok|false| Command to be determined|Stop SD write|
+| ~M104 |CMD M104 Received.<br>ok|false| Command to be determined|Set Hotend Temperature|
+| ~M105 |CMD M105 Received.<br>T0:20 /0 B:21/0<br>ok|true| Hot end and print bed Temperature report|Report Temperatures|
+| ~M106 |CMD M106 Received.<br>ok|false| Command to be determined|Set Fan Speed|
+| ~M107 |CMD M107 Received.<br>ok|false| Command to be determined|Fan Off|
+| ~M108 |CMD M108 Received.<br>ok|false| Command to be determined|Break and Continue|
+| ~M112 |CMD M112 Received.<br>ok|false| Command to be determined|Full Shutdown|
+| ~M114 |CMD M114 Received.<br>X:0 Y:0 Z:0 A:0 B:0<br>ok|true| ToolHead Postion report|Get Current Position|
+| ~M115 |CMD M115 Received.<br>Machine Type: Voxelab Aries<br>Machine Name: Aries<br>Firmware: v1.1.3<br>SN: ABCDEF1234567<br>X: 200 Y: 200 Z: 200<br>Tool Count: 1<br>ok|true| 3D Printer Information|Firmware Info|
+| ~M119 |CMD M119 Received.<br>Endstop: X-max:0 Y-max:0 Z-max:1<br>MachineStatus: READY<br>MoveMode: READY<br>Status: S:0 L:0 J:0 F:0<<br>ok|true| Printer Status Report|Endstop States|
+| ~M140 |CMD M140 Received.<br>ok|false| Command to be determined|Set Bed Temperature|
+| ~M146 |CMD M146 Received.<br>ok|false| Command to be determined|-|
 
 
 | M-Code | Response | Verified | Comment                                          |
