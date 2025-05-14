@@ -10,8 +10,10 @@ Capture is done with Wireshark over Ethernet
 ## How it Works:
 Automatic Mode:
 The slicer make a broadcast with an UDP Packet and the printer responds to it with a UDP broadcast packet (needs more work as my Printer (voxelab Aries) fail most of the time the automatic search, and the wifi is not stable
+
 Manual Mode:
 It's a simple TCP socket on port 8899 and the Gcode is sent with a tilde "~"at the start of the command
+
 there is some proprietary commands like M601 (~M601 S1) and M602 (~M602) that are needed to send other Gcodes via the TCP socket
 As soon as the M-code M601 is sent you can talk both G and M code directly to the printer. 
 
