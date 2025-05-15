@@ -1,15 +1,35 @@
 # FF-VL-PP-RE
 FlashForge and VoxeLab 3D printer Network Protocol
-A  reverse engineering of Flash Forge and Voxelab 3D printers WIFI protocol
+
+A reverse engineering of Flash Forge and Voxelab 3D printers WIFI protocol
 
 Capture is done with Wireshark over Ethernet
 
 
-
-
 ## How it Works:
 Automatic Mode:
-The slicer make a broadcast with an UDP Packet and the printer responds to it with a UDP broadcast packet (needs more work as my Printer (voxelab Aries) fail most of the time the automatic search, and the wifi is not stable
+The slicer make a broadcast with an UDP Packet and the printer responds to it with a UDP broadcast packet (My Printer (voxelab Aries) fail most of the time the automatic search, and the wifi is not stable)
+
+UDP Port on printer: 19000
+
+UDP Port on PC: dynamic 
+
+PC send broadcast on IP 225.0.0.9 on port 19000
+```
+AABBCCDDEEEE0000
+```
+the data transmited is the IP in hexadecial value (AA.BB.CC.DD) and the port as a 16bit Hex Value (EEEE)
+
+
+printer is not busy (HEX value)
+```
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e100000922c32b7110010000
+```
+
+printer is busy (HEX value)
+```
+0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e100000922c32b7110010002
+```
 
 Manual Mode:
 It's a simple TCP socket on port 8899 and the Gcode is sent with a tilde "~"at the start of the command
@@ -53,25 +73,26 @@ When Veified is false, only the bare command has been sent, but the reaction has
 |-|-|-|-|-|
 | ~M601 S1 |CMD M601 Received.<br>Control Success.<br>ok<br>|true| Login Command|-|
 | ~M602 |CMD M602 Received.<br>Control Release.<br>ok|true| Logout Command|-|
-| ~M17 |CMD M17 Received.<br>ok|false| Command to be determined|Enable Steppers|
-| ~M18 |CMD M18 Received.<br>ok|false| Command to be determined|Disable steppers|
-| ~M23 |CMD M23 Received.<br>File opened:  Size: xxxxxxxxxxx<br>File selected<br>ok|false| Command to be determined|Select SD file|
-| ~M24 |CMD M24 Received.<br>ok|false| Command to be determined|Start or Resume SD print|
-| ~M25 |CMD M25 Received.<br>ok|false| Command to be determined|Pause SD print|
+| ~M17 |CMD M17 Received.<br>ok|true| Enable Steppers|Enable Steppers|
+| ~M18 |CMD M18 Received.<br>ok|true| Disable Steppers|Disable steppers|
+| ~M23 |CMD M23 Received.<br>File opened:  Size: xxxxxxxxxxx<br>File selected<br>ok|true| Select and print SD File|Select SD file|
+| ~M24 |CMD M24 Received.<br>ok|true| Resume SD print|Start or Resume SD print|
+| ~M25 |CMD M25 Received.<br>ok|true| Pause SD print||Pause SD print|
 | ~M26 |CMD M26 Received.<br>ok|false| Command to be determined|Set SD position|
 | ~M27 |CMD M27 Received.<br>SD printing byte 0/100<br>ok|true| Printing Status report in % or bytes|Report SD print status|
-| ~M29 |CMD M29 Received.<br>ok|false| Command to be determined|Stop SD write|
-| ~M104 |CMD M104 Received.<br>ok|false| Command to be determined|Set Hotend Temperature|
+| ~M29 |CMD M29 Received.<br>ok|true| Start SD Write|Start SD write|
+| ~M29 |CMD M29 Received.<br>ok|true| Stop SD Write|Stop SD write|
+| ~M104 SXXX |CMD M104 Received.<br>ok|true| Set Hotend Temperature witn XXX °C|Set Hotend Temperature|
 | ~M105 |CMD M105 Received.<br>T0:20 /0 B:21/0<br>ok|true| Hot end and print bed Temperature report|Report Temperatures|
-| ~M106 |CMD M106 Received.<br>ok|false| Command to be determined|Set Fan Speed|
-| ~M107 |CMD M107 Received.<br>ok|false| Command to be determined|Fan Off|
+| ~M106 |CMD M106 Received.<br>ok|true| Enable cooling fan, no S parametter|Set Fan Speed|
+| ~M107 |CMD M107 Received.<br>ok|true| Stop cooling fan|Fan Off|
 | ~M108 |CMD M108 Received.<br>ok|false| Command to be determined|Break and Continue|
-| ~M112 |CMD M112 Received.<br>ok|false| Command to be determined|Full Shutdown|
+| ~M112 |CMD M112 Received.<br>ok|true| Stop the printer|Full Shutdown|
 | ~M114 |CMD M114 Received.<br>X:0 Y:0 Z:0 A:0 B:0<br>ok|true| ToolHead Postion report|Get Current Position|
 | ~M115 |CMD M115 Received.<br>Machine Type: Voxelab Aries<br>Machine Name: Aries<br>Firmware: v1.1.3<br>SN: ABCDEF1234567<br>X: 200 Y: 200 Z: 200<br>Tool Count: 1<br>ok|true| 3D Printer Information|Firmware Info|
 | ~M119 |CMD M119 Received.<br>Endstop: X-max:0 Y-max:0 Z-max:1<br>MachineStatus: READY<br>MoveMode: READY<br>Status: S:0 L:0 J:0 F:0<<br>ok|true| Printer Status Report|Endstop States|
-| ~M140 |CMD M140 Received.<br>ok|false| Command to be determined|Set Bed Temperature|
-| ~M146 |CMD M146 Received.<br>ok|false| Command to be determined|-|
+| ~M140 SXXX |CMD M140 Received.<br>ok|true| Set Bed Temperature witn XXX °C|Set Bed Temperature|
+| ~M146 rXXX gXXX bXXX F0|CMD M146 Received.<br>ok|true| Set hotend LED On or Off (set XXX as 0 for Off and 255 for ON)|-|
 
 
 | M-Code | Response | Verified | Comment                                          |
