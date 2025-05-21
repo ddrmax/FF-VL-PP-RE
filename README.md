@@ -5,6 +5,20 @@ A reverse engineering of Flash Forge and Voxelab 3D printers WIFI protocol
 
 Capture is done with Wireshark over Ethernet
 
+## Work in Progress:
+ESP32 based Simulator: Fully simulate M-Code Responses for these Printers:
+| Printer | M-CODE | G-CODE | G-CODE DOWNLOAD | Discovery | Comment |
+|-|-|-|-|-|-|
+|Voxelab Aries|FULL|NOT SUPPORTED|Simulated (Working)|Working|Printer Owned|
+|Voxelab Aquila Pro|FULL|NOT SUPPORTED|Simulated (Working)|Working|FW Partially Reverse Engeniered|
+|Flashforge Finder 3|PARTIAL|NOT SUPPORTED|Simulated (Working)|Not Working|FW Partially Reverse Engeniered|
+|FlashForge Adventurer III|PARTIAL|NOT SUPPORTED|Simulated (Working)|Not Working|FW Partially Reverse Engeniered|
+|Flashforge Adventurer 5M Pro|PARTIAL|NOT SUPPORTED|Simulated (Working)|Not Working|FW Partially Reverse Engeniered|
+
+Windows Simulator: Early stage, Made with C++ builder
+
+Widows App Controler: Early stage, Made with C++ builder, Simulate the look and feel of Flashprint control window and multiple machines control
+
 
 ## How it Works:
 Automatic Mode:
