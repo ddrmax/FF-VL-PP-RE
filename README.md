@@ -105,40 +105,41 @@ ok\r\n
 This How the Slicers detects the type of Printer (and show the good printer image and visible options in VoxelMaker and flashPrint and Orca Slicer)
 Missing PID's informations are due to lack of firmware avalability or their Reverse engeiniering of other models made by flashforge that are WiFi or Ethernet Compatible
 
-| Printer Maker | Printer Model | PID (HEX) | PID (DEC) | Comment | Works|
-|-|-|-|-|-|-|
-|Flashforge|Dreamer|0x0001|1|-|:heavy_check_mark:|
-|Flashforge|Finder|0x0002|2|-|:heavy_check_mark:|
-|FlashForge|Adventurer III|0x0003|3|-|:heavy_check_mark:|
-|Flashforge|GuiderII|0x0004|4|-|:heavy_check_mark:|
-|Flashforge|Flashforge Inventor|0x0005|5|-|:heavy_check_mark:|
-|Flashforge|Flashforge InventorII|0x0006|6|-|:heavy_check_mark:|
-|FlashForge|Adventurer III|0x0007|7|Maybe the 3C |:heavy_check_mark:|
-|Flashforge|Adventurer III|0x0008|8|Maybe the 3S 3X|:heavy_check_mark:|
-|Flashforge|GuiderII S|0x0009|9|-|:heavy_check_mark:|
-|Flashforge|Dreamer NX|0x000A|10|-|:heavy_check_mark:|
-|Flashforge|Creator 3|0x000C|12|-|:heavy_check_mark:|
-|Flashforge|Adventurer 3 Lite|0x000D|13|-|:heavy_check_mark:|
-|Flashforge|Creator Pro 2|0x000E|14|-|:heavy_check_mark:|
-|Flashforge|Adventurer III|0x000F|15|Maybe the 3S 3X|:heavy_check_mark:|
-|Flashforge|Creator 4|0x0010|16|-|:heavy_check_mark:|
-|Flashforge|Adventurer III|0x0011|17|Maybe the 3S 3X|:heavy_check_mark:|
-|Flashforge|Adventurer 4|0x0012|18|-|:heavy_check_mark:|
-|Flashforge|Adventurer III|0x0013|19|Maybe the 3S 3X|:heavy_check_mark:|
-|Flashforge|Creator 3 Pro|0x0014|20|-|:heavy_check_mark:|
-|Flashforge|Adventurer 4|0x0016|22|-|:heavy_check_mark:|
-|Flashforge|Finder 3|0x0017|23|-|:heavy_check_mark:|
-|Flashforge|Guider 3|0x0018|24|-|:heavy_check_mark:|
-|Flashforge|Guider 3 Plus|0x0019|25|-|:heavy_check_mark:|
-|Flashforge|Adventurer III Pro 2|0x001D|29|-|:heavy_check_mark:|
-|Flashforge|Adventurer 4 Pro|0x001E|30|-|:heavy_check_mark:|
-|Flashforge|Guider 3 Ultra|0x001F|31|-|:heavy_check_mark:|
-|Flashforge|Adventurer 5M|0x0023|35|-|:heavy_check_mark:|
-|Flashforge|Adventurer 5M Pro|0x0024|36|-|:heavy_check_mark:|
-|Flashforge|Guider 4|0x0025|37|-|-|
-|Flashforge|AD5X|0x0026|38|-|:heavy_check_mark:|
-|Voxelab|Aries|0x1001|4097|-|:heavy_check_mark:|
-|Voxelab|Aquila Pro|0x1001|4098|-|:heavy_check_mark:|
+| Printer Maker | Printer Model | PID (HEX) | PID (DEC) | Comment | Works |  VoxelMaker|  flashPrint|  Orca Slicer / Flash Studio| 
+|-|-|-|-|-|-|-|-|-|
+|Flashforge|Dreamer|0x0001|1|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Finder|0x0002|2|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|FlashForge|Adventurer III|0x0003|3|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|GuiderII|0x0004|4|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Flashforge Inventor|0x0005|5|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Flashforge InventorII|0x0006|6|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|FlashForge|Adventurer III|0x0007|7|Maybe the 3C |:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x0008|8|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|GuiderII S|0x0009|9|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Dreamer NX|0x000A|10|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Creator 3|0x000C|12|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer 3 Lite|0x000D|13|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Creator Pro 2|0x000E|14|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x000F|15|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Creator 4|0x0010|16|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x0011|17|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4|0x0012|18|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x0013|19|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Creator 3 Pro|0x0014|20|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4|0x0016|22|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Finder 3|0x0017|23|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Guider 3|0x0018|24|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Guider 3 Plus|0x0019|25|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III Pro 2|0x001D|29|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4 Pro|0x001E|30|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Guider 3 Ultra|0x001F|31|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Adventurer 5M|0x0023|35|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Adventurer 5M Pro|0x0024|36|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Guider 4|0x0025|37|-|-|-|-|:heavy_check_mark:|
+|Flashforge|AD5X|0x0026|38|-|:heavy_check_mark:|-|-|:heavy_check_mark:|
+|Flashforge|Guider4|0x0029|39|-|-|-|-|:heavy_check_mark:|
+|Voxelab|Aries|0x1001|4097|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
+|Voxelab|Aquila Pro|0x1002|4098|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
 
 FlashPrint does printer differenciation via the M115 Gcode command for the control panel and multiconnect and not the PID.
 
