@@ -137,7 +137,8 @@ Missing PID's informations are due to lack of firmware avalability or their Reve
 |Flashforge|Adventurer 5M Pro|0x0024|36|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
 |Flashforge|Guider 4|0x0025|37|-|-|-|-|:heavy_check_mark:|
 |Flashforge|AD5X|0x0026|38|-|:heavy_check_mark:|-|-|:heavy_check_mark:|
-|Flashforge|Guider4|0x0029|39|-|-|-|-|:heavy_check_mark:|
+|Flashforge|Guider4 Pro|0x0029|39|-|-|-|-|:heavy_check_mark:|
+|Flashforge|Guider 3 Ultra|0x0030|40|-|-|-|-|:heavy_check_mark:|
 |Voxelab|Aries|0x1001|4097|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
 |Voxelab|Aquila Pro|0x1002|4098|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
 
