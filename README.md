@@ -105,42 +105,51 @@ ok\r\n
 This How the Slicers detects the type of Printer (and show the good printer image and visible options in VoxelMaker and flashPrint and Orca Slicer)
 Missing PID's informations are due to lack of firmware avalability or their Reverse engeiniering of other models made by flashforge that are WiFi or Ethernet Compatible
 
-| Printer Maker | Printer Model | PID (HEX) | PID (DEC) | Comment | Works |  VoxelMaker|  flashPrint|  Orca Slicer / Flash Studio| 
+| Printer Maker | Printer Model | PID (HEX) | PID (DEC) | MACHINE (flashforge_init.sh) | Works |  M115 Model Report|  flashPrint|  Orca Slicer / Flash Studio| 
 |-|-|-|-|-|-|-|-|-|
-|Flashforge|Dreamer|0x0001|1|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Finder|0x0002|2|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|FlashForge|Adventurer III|0x0003|3|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|GuiderII|0x0004|4|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Flashforge Inventor|0x0005|5|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Flashforge InventorII|0x0006|6|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|FlashForge|Adventurer III|0x0007|7|Maybe the 3C |:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer III|0x0008|8|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|GuiderII S|0x0009|9|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Dreamer NX|0x000A|10|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Creator 3|0x000C|12|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer 3 Lite|0x000D|13|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Creator Pro 2|0x000E|14|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer III|0x000F|15|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Creator 4|0x0010|16|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer III|0x0011|17|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer 4|0x0012|18|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer III|0x0013|19|Maybe the 3S 3X|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Creator 3 Pro|0x0014|20|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer 4|0x0016|22|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Finder 3|0x0017|23|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Guider 3|0x0018|24|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Guider 3 Plus|0x0019|25|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer III Pro 2|0x001D|29|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Adventurer 4 Pro|0x001E|30|-|:heavy_check_mark:|-|:heavy_check_mark:|-|
-|Flashforge|Guider 3 Ultra|0x001F|31|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
-|Flashforge|Adventurer 5M|0x0023|35|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
-|Flashforge|Adventurer 5M Pro|0x0024|36|-|:heavy_check_mark:|-|:heavy_check_mark:|:heavy_check_mark:|
-|Flashforge|Guider 4|0x0025|37|-|-|-|-|:heavy_check_mark:|
-|Flashforge|AD5X|0x0026|38|-|:heavy_check_mark:|-|-|:heavy_check_mark:|
+|Flashforge|Dreamer|0x0001|1|Driver File|:heavy_check_mark:|Flashforge Dreamer|:heavy_check_mark:|-|
+|Flashforge|Finder|0x0002|2|Driver File|:heavy_check_mark:|Flashforge Finder|:heavy_check_mark:|-|
+|FlashForge|Guider|0x0003|3|Driver File|:heavy_check_mark:|Flashforge Guider|:heavy_check_mark:|-|
+|Flashforge|GuiderII|0x0004|4|PID File - Driver File|:heavy_check_mark:|Flashforge GuiderII|:heavy_check_mark:|-|
+|Flashforge|Flashforge Inventor|0x0005|5|Driver File|:heavy_check_mark:|Flashforge Inventor|:heavy_check_mark:|-|
+|Flashforge|Flashforge InventorII|0x0006|6|Driver File|:heavy_check_mark:|Flashforge InventorII|:heavy_check_mark:|-|
+|FlashForge|Finder Plus|0x0007|7|Driver File |:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x0008|8|MACHINE=Adventurer3|:heavy_check_mark:|FlashForge Adventurer III|:heavy_check_mark:|-|
+|Flashforge|GuiderII S|0x0009|9|PID File|:heavy_check_mark:|Flashforge GuiderII S|:heavy_check_mark:|-|
+|Flashforge|Dreamer NX|0x000A|10|Driver File|:heavy_check_mark:|Flashforge Dreamer NX|:heavy_check_mark:|-|
+|Flashforge|Creator 3|0x000C|12|PID File|:heavy_check_mark:|FlashForge Creator 3|:heavy_check_mark:|-|
+|Flashforge|Adventurer 3 Lite|0x000D|13|MACHINE=Adventurer3-Lite|:heavy_check_mark:|Flashforge Adventurer 3 Lite|:heavy_check_mark:|-|
+|Flashforge|Creator Pro 2|0x000E|14|Driver File|:heavy_check_mark:|Flashforge Creator Pro 2|:heavy_check_mark:|-|
+|Flashforge|Adventurer III Pro|0x000F|15|Guess|:heavy_check_mark:|FlashForge Adventurer III Pro|:heavy_check_mark:|-|
+|Flashforge|Creator 4|0x0010|16|PID File|:heavy_check_mark:|FlashForge Creator 4|:heavy_check_mark:|-|
+|Flashforge|Creator Max 2|0x0011|17|Driver File|:heavy_check_mark:|Flashforge Creator Max 2|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4|0x0012|18|-|:heavy_check_mark:|Flashforge Adventurer 4|:heavy_check_mark:|-|
+|Flashforge|Adventurer III|0x0013|19|Guess|:heavy_check_mark:|FlashForge Adventurer 3S FlashForge Adventurer 3X|:heavy_check_mark:|-|
+|Flashforge|Creator 3 Pro|0x0014|20|MACHINE=Creator3Pro|:heavy_check_mark:|FlashForge Creator 3 Pro|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4 Lite|0x0016|22|MACHINE=Adventurer4-Lite|:heavy_check_mark:|Flashforge Adventurer 4|:heavy_check_mark:|-|
+|Flashforge|Finder 3|0x0017|23|MACHINE=Finder3|:heavy_check_mark:|FlashForge Finder 3|:heavy_check_mark:|-|
+|Flashforge|Guider 3|0x0018|24|MACHINE=Guider3|:heavy_check_mark:|FlashForge Guider 3|:heavy_check_mark:|-|
+|Flashforge|Guider 3 Plus|0x0019|25|PID File|:heavy_check_mark:|FlashForge Guider 3 Plus|:heavy_check_mark:|-|
+|Flashforge|Creator Pro T|0x001A|26|Driver File|:heavy_check_mark:|Flashforge Creator Pro T|:heavy_check_mark:|-|
+|Flashforge|Adventurer III Pro 2|0x001D|29|MACHINE=Adventurer3-pro2|:heavy_check_mark:|FlashForge Adventurer III Pro 2|:heavy_check_mark:|-|
+|Flashforge|Adventurer 4 Pro|0x001E|30|MACHINE=Adventurer4-Pro|:heavy_check_mark:|Flashforge Adventurer 4 Pro|:heavy_check_mark:|-|
+|Flashforge|Guider 3 Ultra|0x001F|31|MACHINE=Guider3U|:heavy_check_mark:|FlashForge Guider 3 Ultra|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Adventurer 5M|0x0023|35|MACHINE=Adventurer5M|:heavy_check_mark:|Flashforge Adventurer 5M|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Adventurer 5M Pro|0x0024|36|MACHINE=Adventurer5MPro|:heavy_check_mark:|Flashforge Adventurer 5M Pro|:heavy_check_mark:|:heavy_check_mark:|
+|Flashforge|Guider 4|0x0025|37|MACHINE=Guider4|-|-|-|:heavy_check_mark:|
+|Flashforge|AD5X|0x0026|38|MACHINE=AD5X|:heavy_check_mark:|-|-|:heavy_check_mark:|
 |Flashforge|Guider4 Pro|0x0029|39|-|-|-|-|:heavy_check_mark:|
 |Flashforge|Guider 3 Ultra|0x0030|40|-|-|-|-|:heavy_check_mark:|
-|Voxelab|Aries|0x1001|4097|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
-|Voxelab|Aquila Pro|0x1002|4098|-|:heavy_check_mark:|:heavy_check_mark:|-|-|
+|Flashforge|Creator Max|0x00E7|231|Driver File|:heavy_check_mark:|Flashforge Creator Max|:heavy_check_mark:|-|
+|Flashforge|Finder (Clas Ohlson Version)|0x00EE|238|Driver File|:heavy_check_mark:|-|:heavy_check_mark:|-|
+|Flashforge|Artemis|0x0019|25|FlashPrint RE|:heavy_check_mark:|Artemis|:heavy_check_mark:|-|
+|MonoPrice|MP Voxel|-|-|-|:heavy_check_mark:|Voxel|MP FlashPrint|-|
+|MonoPrice|MP Inventor|0x00F8|248|Driver File|:heavy_check_mark:|MP InventorI|MP FlashPrint|-|
+|MonoPrice|MP Inventor II|0x00F9|249|Driver File|:heavy_check_mark:|MP InventorII|MP FlashPrint|-|
+|MonoPrice|MP Guider II|0x00FA|250|Driver File|:heavy_check_mark:|MP GuiderII|MP FlashPrint|-|
+|Voxelab|Aries|0x1001|4097|MACHINE=Aries|:heavy_check_mark:|Voxelab Aries|VoxelMaker|-|
+|Voxelab|Aquila Pro|0x1002|4098|-|:heavy_check_mark:|Voxelab Aquila Pro|VoxelMaker|-|
+|Voxelab|Aquila Plus|-|-|-|:heavy_check_mark:|Voxelab Aquila Plus|VoxelMaker|-|
 
 FlashPrint does printer differenciation via the M115 Gcode command for the control panel and multiconnect and not the PID.
 
